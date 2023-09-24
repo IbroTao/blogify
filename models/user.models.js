@@ -2,7 +2,7 @@ const {Schema, model} = require('mongoose');
 
 const UserSchema = new Schema({
     name: {
-        type: String,
+        type: String, 
         required: true,
         minlength: 3,
         maxlength: 20,
@@ -26,7 +26,7 @@ const UserSchema = new Schema({
         maxlength: 350,
     }
 },{
-    timestamps: true,
+    timestamps: true, // When the user was created and updated
 });
 
 const UserModel = model('users', UserSchema);
